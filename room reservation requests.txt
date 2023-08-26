@@ -1,0 +1,43 @@
+Room reservation requests:
+
+RKC 107, 10am to 5pm - June 12th Monday
+RKC 100, 10am to 5pm - June 13th Tuesday
+RKC 100, 10am to 5pm - June 14th Wednesday
+RKC 100, 10am to 5pm - June 15th Thursday
+RKC 100, 10am to 5pm - June 16th Friday
+
+RKC 100, 10am to 5pm - June 19th Monday
+RKC 100, 10am to 5pm - June 20th Tuesday
+RKC 100, 10am to 5pm - June 21st Wednesday
+RKC 100, 10am to 5pm - June 22nd Thursday
+RKC 100, 10am to 5pm - June 23rd Friday
+
+RKC 107, 10am to 5pm - June 26th Monday
+RKC 107, 10am to 5pm - June 27th Tuesday
+RKC 107, 10am to 5pm - June 28th Wednesday
+RKC 107, 10am to 5pm - June 29th Thursday
+RKC 107, 10am to 5pm - June 30th Friday
+
+RKC 100, 10am to 5pm - July 3rd Monday
+RKC 100, 10am to 5pm - July 4th Tuesday
+RKC 100, 10am to 5pm - July 5th Wednesday
+RKC 100, 10am to 5pm - July 6th Thursday
+RKC 100, 10am to 5pm - July 7th Friday
+
+RKC 100, 10am to 5pm - July 10th Monday
+RKC 100, 10am to 5pm - July 11th Tuesday
+RKC 100, 10am to 5pm - July 12th Wednesday
+RKC 100, 10am to 5pm - July 13th Thursday
+RKC 100, 10am to 5pm - July 14th Friday
+
+RKC 107, 10am to 5pm - July 17th Monday
+RKC 100, 10am to 5pm - July 18th Tuesday
+RKC 100, 10am to 5pm - July 19th Wednesday
+RKC 100, 10am to 5pm - July 20th Thursday
+RKC 100, 10am to 5pm - July 21st Friday
+
+RKC 107, 10am to 5pm - July 24th Monday
+RKC 100, 10am to 5pm - July 25th Tuesday
+RKC 100, 10am to 5pm - July 26th Wednesday
+RKC 100, 10am to 5pm - July 27th Thursday
+RKC 100, 10am to 5pm - July 28st Friday

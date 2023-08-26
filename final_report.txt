@@ -1,0 +1,46 @@
+BSRI Summer 2023
+Josef Lazar
+Final Report
+
+Learned about acoustics of speech and audio processing
+Installed and learned to use praat
+Installed Ubuntu on my laptop and learned more about unix
+Downloaded MSP-Podcast data set
+Installed openSMILE and learned to use it
+Extracted audio features from MSP-Podcast data set to a csv file using openSMILE with IS09_emotion.conf (with help from the subprocess library in python)
+Made a clean csv file with audio features, file names, gender labels, text, and emotion labels
+Wrote code to read in the data and implement multiclass classifiers from the sklearn package to classify the audiofiles by emotional labels (this method didn't work well enough though)
+The sklearn models we used were: logistic regression, various SVMs (linear, LinearSVC, rbf, poly degree 2, poly degree 3, and poly degree 4), and random forests with varying hyperparameters
+Wrote code to read in the data and implement mulitclass classifiers from the pytorch package to classify the audiofiles by emotional labels (this method also didn't work well enough)
+Wrote code to read in the data and implement binary classifiers from the sklean package to classify the audiofiles by emotional labels (this method worked better but still not good enough)
+Tried extracting a different set of features using ComParE2016 in openSMILE
+This data set was significantly larger which caused memory issues and prohibitively slow training times, and the results were not much different, so we stuck with the old data set
+Nathan used LIWC to extract features from the audiofiles' transcritps
+I made a csv file that combined the openSMILE features with the LIWC features
+Some of the sklearn models worked well enough on this new data set when searching for happy audio files, specifically the following models worked well:
+	Logistic regression, trained on all genders => precision: 0.65, regression: 0.12
+	SVM poly degree 2, trained on all genders => precision: 0.64, regression: 0.07
+	Random forest, trained on all genders => precision: 0.73, regression: 0.02
+	Logistic regression, trained exclusively on females => precision: 0.67, regression: 0.21
+	SVM poly degree 2, trained exclusively on females => precision: 0.64, regression: 0.08
+	SVM poly degree 3, trained exclusively on females => precision: 0.59, regression: 0.08
+	Random forest, trained exclusively on females => precision: 0.71, regression: 0.02
+	Logistic regression, trained exclusively on males => precision: 0.50, regression: 0.13
+Interestingly, models trained exclusively on males performed signifficantly worse than those trained on all genders or exclisively females
+I downloaded the following LibriTTS data sets: train-clean-360.tar.gz, train-clean-100.tar.gz, test-clean.tar.gz, and dev-clean.tar.gz
+I extracted their audiofeatures using openSMILE with IS09_emotion.conf
+I made a clean csv file with their audio features, file names, gender labels, text, and id (no emotional labels though)
+I got a data set of LIWC features extracted from these data sets from Nathan
+Combined them to get a large LibriTTS data csv file similar to the one from MSP-Podcast that the models were trained on
+On the female audiofiles, I ran the 4 best models trained exclusively on females, and got 4 lists of audiofiles which the models predict as being happy
+I uploaded them to the google drive and shared them (https://drive.google.com/drive/folders/1LD1XN1F8GiCn2e6jEWw_3w8rpJnQULVN?usp=sharing)
+Two of these lists have 5000 or more audiofiles, which means that they are sufficiently large to train a TTS model on
+Upon listening to some of them, they do not all sound happy, though they all seem to have some high pitch moments
+
+
+
+
+
+
+
+

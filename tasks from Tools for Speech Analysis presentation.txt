@@ -1,0 +1,55 @@
+task 1
+- the length of a cycle in the waveform is 0.009647
+- minimum picth: 94.23323468924103 Hz
+- maximum pitch: 279.37353050690604 Hz
+- mean pitch: 113.77320486080937 Hz
+- minimum intensity: -3.056315239605902 dB
+- maximum intensity: 69.24058432984377 dB
+- mean intensity: 62.49947534795354 dB
+
+task 8: Voice Quality
+- when the sentance is whispered, the pitch is signifficantly increased
+  and the intensity is signifficantly decreased
+- normal recording; jitter: 1.706%, shimmer: 6.416%
+- whisper recording; jitter: 8.568%, shimmer: 23.026%
+- creaky recording; jitter: 7.398%, shimmer: 25.056%
+
+task 2: Contours
+- both question recordings had an increase in F0 at the end,
+  while the statement recording ended with a decrease in F0
+- both the satament and yes-no question recordings started with a flat F0,
+  and the why question started with a decrease and subsequent increase in F0
+
+task 3: Clipping
+...
+
+task 6: Emotional Speech
+angry mean pitch: 138.65551725429552 Hz
+angry maximum pitch: 228.12193786194672 Hz
+angry mean intensity: 71.64191493715698 dB
+angry maximum intensity: 78.1655420534482 dB
+
+sad mean pitch: 128.06939653038808 Hz
+sad maximum pitch: 198.76151767471606 Hz
+sad mean intensity: 66.05796918497397 dB
+sad maximum intensity: 74.13295566498658 dB
+
+happy mean pitch: 155.05704718368514 Hz
+happy maximum pitch: 270.90239162006185 Hz
+happy mean intensity: 70.53668396379085 dB
+happy maximum intensity: 75.6886241929304 dB
+
+The F0 contours are quite similar across recordings,
+though the sad recording are a bit lower and less spread out
+The happy one has the most change over all, with really high highs.
+
+task 7: Masking
+making a pass band with frequencies from 0 to 500 and smoothing 100 masks the words but retains the intonation
+making a pass band with frequencies from 3000 to 10000 and smoothing 1000 masks the intonation byt retains the words
+
+task 8: Format Analysis
+F1: 547.7235149214973 Hz
+F2: 1709.0608539343739 Hz
+
+task 5: Pitch contour cloning
+done

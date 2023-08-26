@@ -1,0 +1,499 @@
+finding happy audiofiles in MSP_Podcast_data_liwc_and_features.csv using binary_emotion_classifier_sklearn.py
+
+all genders:
+
+model = LogisticRegression(random_state = 0)
+=>
+Unbalanced test1 data metrics:
+positive values: 945
+negative values: 13088
+accuracy: 0.738259816147652
+precision: 0.6571428571428571
+recall: 0.15642317380352644
+Balanced test1 data metrics:
+positive values: 535
+negative values: 6617
+accuracy: 0.5023769574944071
+precision: 0.8841121495327103
+recall: 0.11914357682619647
+
+model = svm.SVC(kernel = "linear", cache_size = 7000)
+=>
+I gave up after 24 hours :/
+
+model = svm.LinearSVC(C = 1.0, max_iter = 1_000)
+=>
+Unbalanced test1 data metrics:
+positive values: 1532
+negative values: 12501
+accuracy: 0.715955248343191
+precision: 0.49477806788511747
+recall: 0.19093198992443325
+Balanced test1 data metrics:
+positive values: 761
+negative values: 6415
+accuracy: 0.49818840579710144
+precision: 0.7424441524310118
+recall: 0.14231738035264482
+
+model = svm.SVC(kernel = "rbf", gamma = 0.7, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 14033
+accuracy: 0.7170954179434191
+precision: -1
+recall: 0.0
+Balanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 7243
+accuracy: 0.45188457821344746
+precision: -1
+recall: 0.0
+
+model = svm.SVC(kernel = "poly", degree = 2, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 430
+negative values: 13603
+accuracy: 0.7260742535452148
+precision: 0.6465116279069767
+recall: 0.07002518891687658
+Balanced test1 data metrics:
+positive values: 251
+negative values: 6970
+accuracy: 0.4755574020218806
+precision: 0.8645418326693227
+recall: 0.05465994962216625
+
+model = svm.SVC(kernel = "poly", degree = 3, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 677
+negative values: 13356
+accuracy: 0.7203021449440604
+precision: 0.5332348596750369
+recall: 0.09093198992443324
+Balanced test1 data metrics:
+positive values: 385
+negative values: 6870
+accuracy: 0.48380427291523087
+precision: 0.7922077922077922
+recall: 0.07682619647355164
+
+model = svm.SVC(kernel = "poly", degree = 4, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 615
+negative values: 13418
+accuracy: 0.7151713817430343
+precision: 0.47804878048780486
+recall: 0.07405541561712846
+Balanced test1 data metrics:
+positive values: 351
+negative values: 6850
+accuracy: 0.46965699208443273
+precision: 0.7150997150997151
+recall: 0.06322418136020151
+
+training random forest
+n_estim = 100
+crit = "entropy"
+max_feat = 500
+max_dep = 7
+model = RandomForestClassifier(n_estimators = n_estim,
+                            criterion = crit,
+                            max_features = max_feat,
+                            max_depth = max_dep)
+=>
+Unbalanced test1 data metrics:
+positive values: 5
+negative values: 14028
+accuracy: 0.7174517209434903
+precision: 1.0
+recall: 0.0012594458438287153
+Balanced test1 data metrics:
+positive values: 3
+negative values: 7238
+accuracy: 0.45214749344013255
+precision: 1.0
+recall: 0.0007556675062972292
+
+training random forest
+n_estim = 100
+crit = "entropy"
+max_feat = "sqrt"
+max_dep = 7
+model = RandomForestClassifier(n_estimators = n_estim,
+                            criterion = crit,
+                            max_features = max_feat,
+                            max_depth = max_dep)
+=>
+Unbalanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 14033
+accuracy: 0.7170954179434191
+precision: -1
+recall: 0.0
+Balanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 7262
+accuracy: 0.45331864500137703
+precision: -1
+recall: 0.0
+
+model = RandomForestClassifier()
+=>
+Unbalanced test1 data metrics:
+positive values: 154
+negative values: 13879
+accuracy: 0.7222261811444453
+precision: 0.7337662337662337
+recall: 0.028463476070528966
+Balanced test1 data metrics:
+positive values: 91
+negative values: 7047
+accuracy: 0.45460913421126364
+precision: 0.9230769230769231
+recall: 0.02115869017632242
+
+---------------------------------------------------------------------------------------------------
+
+only female:
+
+model = LogisticRegression(random_state = 0)
+=>
+Unbalanced test1 data metrics:
+positive values: 677
+negative values: 6062
+accuracy: 0.7170203294257308
+precision: 0.6691285081240768
+recall: 0.21207865168539325
+Balanced test1 data metrics:
+positive values: 364
+negative values: 3320
+accuracy: 0.496742671009772
+precision: 0.8873626373626373
+recall: 0.15121722846441948
+
+model = svm.SVC(kernel = "linear", cache_size = 7000)
+=>
+didn't attempt
+
+model = svm.LinearSVC(C = 1.0, max_iter = 1_000)
+=>
+Unbalanced test1 data metrics:
+positive values: 1143
+negative values: 5596
+accuracy: 0.6929811544739576
+precision: 0.5293088363954506
+recall: 0.28323970037453183
+Balanced test1 data metrics:
+positive values: 634
+negative values: 3054
+accuracy: 0.5168112798264642
+precision: 0.7791798107255521
+recall: 0.23127340823970038
+
+model = svm.SVC(kernel = "rbf", gamma = 0.7, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 6739
+accuracy: 0.6830390265618044
+precision: -1
+recall: 0.0
+Balanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 3690
+accuracy: 0.4211382113821138
+precision: -1
+recall: 0.0
+
+model = svm.SVC(kernel = "poly", degree = 2, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 257
+negative values: 6482
+accuracy: 0.69357471434931
+precision: 0.6381322957198443
+recall: 0.07677902621722846
+Balanced test1 data metrics:
+positive values: 149
+negative values: 3572
+accuracy: 0.4525665143778554
+precision: 0.8322147651006712
+recall: 0.05805243445692884
+
+model = svm.SVC(kernel = "poly", degree = 3, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 298
+negative values: 6441
+accuracy: 0.6907553049413859
+precision: 0.587248322147651
+recall: 0.08192883895131087
+Balanced test1 data metrics:
+positive values: 159
+negative values: 3549
+accuracy: 0.44902912621359226
+precision: 0.7924528301886793
+recall: 0.05898876404494382
+
+model = svm.SVC(kernel = "poly", degree = 4, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 255
+negative values: 6484
+accuracy: 0.6825938566552902
+precision: 0.49411764705882355
+recall: 0.05898876404494382
+Balanced test1 data metrics:
+positive values: 132
+negative values: 3555
+accuracy: 0.43639815568212637
+precision: 0.7196969696969697
+recall: 0.04447565543071161
+
+training random forest
+n_estim = 100
+crit = "entropy"
+max_feat = 500
+max_dep = 7
+model = RandomForestClassifier(n_estimators = n_estim,
+                            criterion = crit,
+                            max_features = max_feat,
+                            max_depth = max_dep)
+=>
+Unbalanced test1 data metrics:
+positive values: 2
+negative values: 6737
+accuracy: 0.6833358064994807
+precision: 1.0
+recall: 0.0009363295880149813
+Balanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 3649
+accuracy: 0.4146341463414634
+precision: -1
+recall: 0.0
+
+training random forest
+n_estim = 100
+crit = "entropy"
+max_feat = "sqrt"
+max_dep = 7
+model = RandomForestClassifier(n_estimators = n_estim,
+                            criterion = crit,
+                            max_features = max_feat,
+                            max_depth = max_dep)
+=>
+Unbalanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 6739
+accuracy: 0.6830390265618044
+precision: -1
+recall: 0.0
+Balanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 3732
+accuracy: 0.42765273311897106
+precision: -1
+recall: 0.0
+
+model = RandomForestClassifier()
+=>
+Unbalanced test1 data metrics:
+positive values: 63
+negative values: 6676
+accuracy: 0.6870455557204334
+precision: 0.7142857142857143
+recall: 0.021067415730337078
+Balanced test1 data metrics:
+positive values: 38
+negative values: 3687
+accuracy: 0.4357046979865772
+precision: 0.9473684210526315
+recall: 0.016853932584269662
+
+---------------------------------------------------------------------------------------------------
+
+only male:
+
+model = LogisticRegression(random_state = 0)
+=>
+Unbalanced test1 data metrics:
+positive values: 471
+negative values: 6823
+accuracy: 0.7481491636961887
+precision: 0.4968152866242038
+recall: 0.12758996728462377
+Balanced test1 data metrics:
+positive values: 231
+negative values: 3577
+accuracy: 0.554359243697479
+precision: 0.7965367965367965
+recall: 0.10032715376226826
+
+model = svm.SVC(kernel = "linear", cache_size = 7000)
+=>
+gave up after 13 hours
+
+model = svm.LinearSVC(C = 1.0, max_iter = 1_000)
+=>
+Unbalanced test1 data metrics:
+positive values: 733
+negative values: 6561
+accuracy: 0.736358650945983
+precision: 0.4392905866302865
+recall: 0.17557251908396945
+Balanced test1 data metrics:
+positive values: 388
+negative values: 3378
+accuracy: 0.5539033457249071
+precision: 0.6984536082474226
+recall: 0.14776444929116686
+
+model = svm.SVC(kernel = "rbf", gamma = 0.7, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 7294
+accuracy: 0.7485604606525912
+precision: -1
+recall: 0.0
+Balanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 3701
+accuracy: 0.5044582545258038
+precision: -1
+recall: 0.0
+
+model = svm.SVC(kernel = "poly", degree = 2, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 243
+negative values: 7051
+accuracy: 0.7385522347134631
+precision: 0.3497942386831276
+recall: 0.04634678298800436
+Balanced test1 data metrics:
+positive values: 126
+negative values: 3653
+accuracy: 0.5183911087589309
+precision: 0.5555555555555556
+recall: 0.03816793893129771
+
+model = svm.SVC(kernel = "poly", degree = 3, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 279
+negative values: 7015
+accuracy: 0.736907046887853
+precision: 0.34767025089605735
+recall: 0.05288985823336968
+Balanced test1 data metrics:
+positive values: 154
+negative values: 3630
+accuracy: 0.5200845665961945
+precision: 0.5584415584415584
+recall: 0.04689203925845147
+
+model = svm.SVC(kernel = "poly", degree = 4, C = 1.0, cache_size = 7000)
+=>
+Unbalanced test1 data metrics:
+positive values: 249
+negative values: 7045
+accuracy: 0.7338908692075679
+precision: 0.285140562248996
+recall: 0.03871319520174482
+Balanced test1 data metrics:
+positive values: 123
+negative values: 3593
+accuracy: 0.5083423035522067
+precision: 0.5284552845528455
+recall: 0.03544165757906216
+
+training random forest
+n_estim = 100
+crit = "entropy"
+max_feat = 500
+max_dep = 7
+model = RandomForestClassifier(n_estimators = n_estim,
+                            criterion = crit,
+                            max_features = max_feat,
+                            max_depth = max_dep)
+=>
+Unbalanced test1 data metrics:
+positive values: 16
+negative values: 7278
+accuracy: 0.7502056484782013
+precision: 0.875
+recall: 0.007633587786259542
+Balanced test1 data metrics:
+positive values: 15
+negative values: 3750
+accuracy: 0.5163346613545817
+precision: 0.9333333333333333
+recall: 0.007633587786259542
+
+training random forest
+n_estim = 100
+crit = "entropy"
+max_feat = "sqrt"
+max_dep = 7
+model = RandomForestClassifier(n_estimators = n_estim,
+                            criterion = crit,
+                            max_features = max_feat,
+                            max_depth = max_dep)
+=>
+Unbalanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 7294
+accuracy: 0.7485604606525912
+precision: -1
+recall: 0.0
+Balanced test1 data metrics:
+no true positives or false positives
+positive values: 0
+negative values: 3737
+accuracy: 0.5092320042815093
+precision: -1
+recall: 0.0
+
+model = RandomForestClassifier()
+=>
+Unbalanced test1 data metrics:
+positive values: 76
+negative values: 7218
+accuracy: 0.7477378667397862
+precision: 0.4605263157894737
+recall: 0.019083969465648856
+Balanced test1 data metrics:
+positive values: 35
+negative values: 3740
+accuracy: 0.519205298013245
+precision: 0.7714285714285715
+recall: 0.014721919302071973
+
+
+
+
+
+
+
+
+
+

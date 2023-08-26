@@ -1,0 +1,93 @@
+BSRI Summer 2023
+Josef Lazar
+
+Week 1 summary:
+installed praat and played arround with it
+watched some videos about praat https://www.youtube.com/playlist?list=PL6niCBwOhjHga4bCS83VJ2uKzQ8ZjEVeG
+installed parselmouth
+learned about Fourier Transforms https://www.youtube.com/watch?v=spUNpyF58BY
+learned about Spectograms https://en.wikipedia.org/wiki/Spectrogram
+learned about Mel Filter Banks https://youtu.be/9GHCiiDLHQ4
+read section 4 of the 28th chapter of the Speech and Language Processing text book
+read through Acoustics of Speech presentation from CS6998 class
+read through Tools for Speech Analysis presentation from CS6998 class and did all the praat tasks
+got a monitor lent to me from Nicole and set it up with my laptop
+dual booted laptop to have both Windows and Ubuntu
+installed linux version of praat on Ubuntu partition and checked compatability of files on windows partition
+started reading The INTERSPEECH 2009 Emotion Challenge paper
+tried (unsuccessfully) to installing openSMILE on Ubuntu
+
+Week 2 summary:
+finished reading The INTERSPEECH 2009 Emotion Challenge paper
+downloaded Audios.zip file from google drive to external SSD
+learned about unix on Hyperskill (JetBrains Academy)
+spend time getting Ubuntu set up
+installed openSMILE
+successfully extracted audio file data from an audio file to a csv file in terminal
+tried to extract audio file data from all audio files in a folder to a csv file using python opensmile library (unsuccessfully)
+tried to extract audio file data from all audio files in a folder to a csv file using python subprocess library (successfully)
+wrote program to reorganize the csv file and add audio file names as well as emotion lables
+applied the data extraction program and the csv reorganization program to the large podcast audio file data set
+uploaded the podcast data csv file to the shared google drive
+started working on scikit learn program to test which algorithm is best at predicting emotion from podcast data
+
+Week 3 summary:
+started reading about git and got GitHub set up on Ubuntu https://git-scm.com/book/en/v2
+relearned how decision trees work https://www.youtube.com/watch?v=_L39rN6gz7Y
+relearned how random forests work https://www.youtube.com/watch?v=J4Wdy0Wc_xQ
+wrote program that classifies the podcast data csv file using the random forest classifier from the scikit learn library
+tested the program with various hyperparameters, but the highest accuracy rate was only 0.45
+relearned how SVMs work https://scikit-learn.org/stable/modules/svm.html
+modified random forest classifier program to use the SVM classifier from the scikit learn libaray
+ran the SVM classifier with "linear" and "rbf" kerner, but the highest accuracy rate was sill only ...
+relearned how logistic regression works https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+modified the SVM classifier to use the logistic regression classifier form the scikit learn library
+ran the logistic regression classifier, but the accuracy rate was only 0.41
+started working on a neural network classifier
+experimented with normalization and scaling to increase accuracy, but with little success
+started working on binary classifier to sort audio files into those that are happy and those that are not
+started learning about marlin https://speech.zone/courses/one-off/merlin-interspeech2017/videos/from-text-to-speech/
+
+Week 4 summary:
+made a neural net classifier
+ran tests with neural net classifier with varrying values for batch size, epoch size, layer count, and layer size
+discovered that neural networks are not a good way to predict emotions given our data set
+wrote binary SVM classifier that predicts whether or not an audio file is labled as happy
+trained binary SVM classifier on 1000 audio samples and got 70% precision and 80% accuracy
+currently training binary SVM classifier on full testing data set (it has been running for 19 hours!)
+modified earlier opensmile program to extract data from libritts data set
+ran modified program and extracted data from libritts to chroma.csv
+modified earlier program to reformat chroma.csv to work with libritts data set
+ran modified program and got a nice csv file
+uploaded said csv file to google drive as libritts_data.csv
+
+Week 5 summary:
+discovered that binary SVM classifier was not training correctly because of bad preprocessing
+fixed preprocessing issue by using normalize() and MinMaxScaler(feature_range = (-1, 1)) instead of StandardScaler()
+discovered that bianry SVM was classifying almost all data points as non-happy
+rewrote code to balance data, by randomly removing non-happy data points until len(happy) == len(non-happy)
+trained binary svm.SVC, svm.LinearSVC, logistic regression and RandomForest from sklearn with varying hyperparameters on balanced happy non-happy data
+got precision to increas to 0.70 when predicting balanced data and 0.42 when predicting non-balanced data
+rewrote pytorch code to balance data
+results from pytorch neural network models were not as good as results from sklearn models
+extracted new chroma.csv data set file from podcast data using ComParE_2016.conf instead of is09-13/IS09_emotion.conf
+copied data from chroma.csv to MSP_Podcast_data_compare2016.csv file which includes file names, emotion lables, and correct column formating
+uploaded MSP_Podcast_data_compare2016.csv to google drive
+tried running sklearn models on new data set but ran out of RAM
+I will ask Nicole if I can get access to a computer with 32GB of RAM, otherwise I'll have to make significant changes to the code
+
+Week 6 summary:
+made code compatible with compare2016 data
+ran models on compare2016 data, but they didn't perform better than the IS09_emotion data
+added gender column to IS09_emotion csv file
+uploaded new csv file with gender column to google drive
+ran models on female voices from new csv file
+started working on splitting the data into the suggested partitions as opposed to the current random 80-20 split into training and testing sets
+got liwc feature csv files for MSP_podcast data and LibriTTS data from Nathan
+started working on joining the liwc and feature csv files
+
+
+
+
+
+
